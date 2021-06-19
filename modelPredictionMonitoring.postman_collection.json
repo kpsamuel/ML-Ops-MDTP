@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "cac71eb2-1bc9-4afd-b9c8-710a5e6a3850",
+		"name": "modelPredictionMonitoring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "appstatusAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/appstatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"appstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadmodelAPI",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "model",
+							"type": "file",
+							"src": "/D:/machine_learning_projects/machineLearningMonitoringTool/example_models/classification.zip"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7000/uploadmodel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"uploadmodel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadmodelDeleteAPI",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mmid\" : \"9b04088e-cf11-11eb-b524-c8b29b70e10c\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/uploadmodel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"uploadmodel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predictionAPI",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mmid\" : \"9b04088e-cf11-11eb-b524-c8b29b70e10c\",\r\n \"x_features\" : {\"SepalLengthCm\":1.0,\r\n                 \"SepalWidthCm\":1.1,\r\n                 \"PetalLengthCm\":1.0,\r\n                 \"PetalWidthCm\":1.8}\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/predict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mmlogsAPI",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mmid\" : \"9b04088e-cf11-11eb-b524-c8b29b70e10c\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/mmlogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"mmlogs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

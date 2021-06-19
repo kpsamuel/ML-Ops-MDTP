@@ -1,0 +1,9 @@
+{
+	"modelname" : "linearRegressionModel.pkl",
+	"modeltype" : "linear",
+	"trained_feature_scaler" : "trainedFeatureScaler.pkl",
+	"x_train_filename" : "x_train.csv",
+	"input_file_to_refer" : "inputdata.json",
+	"predicted_file_to_refer" : "predicted_result.json"
+
+}

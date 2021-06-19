@@ -1,0 +1,26 @@
+{
+	"apiHostName" : "localhost",
+	"apiPortNumber" : 7000,
+	"dbHostName" : "localhost",
+	"dbPortNumber" : 27017,
+	"dbName" : "modelPredictionMonitoring",
+	"modelssavedpath" : "uploadedmodels",
+	"backupDataFolder" : "dataBackup",
+	"errorID" : {
+				  "-1"  : "system error occured",
+				  "300" : "unspportive file type",
+				  "301" : "folder already present for made request",
+				  "302" : "datafile read operation error",
+				  "303" : "modelloading error",
+				  "304" : "failed to create model explainable",
+				  "305" : "model mmid validation error",
+				  "306" : "error while running virtual model and prediction",
+				  "307" : "error in getting shap information",
+				  "308" : "error in saving final prediction data",
+				  "309" : "error in writting x_features",
+				  "500" : "database conenction failed",
+				  "501" : "database data insertion failed",
+				  "502" : "data write error",
+				  "503" : "data deletion error",
+				  "504" : "data read error"}
+}
